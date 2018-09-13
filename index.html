@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <title>Programming Assignment #1</title>
    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
-
+    <link rel="stylesheet" href="css/sticky-footer-navbar.css" type="text/css" />
 </head>
 <body>
-
+    <header>
    <div class="container">
        <div class="row">
            <div class="jumbotron" style="width:100%; background: url(images/header2.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
-               <h1>Hello</h1>
+               <h1 style="color:#ffffff">Recruiting the Worlds Best Inc.</h1>
            </div>
        </div> 
        <div class="row">
@@ -24,76 +24,99 @@
                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">About SSLNS</a>
+                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">About SSLNS</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Staffing</a>
+                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Staffing</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#"> Job Seeker Resources</a>
+                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"> Job Seeker Resources</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#"> Employer Resources</a>
+                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"> Employer Resources</a>
                        </li>
                    </ul>
                </div>
            </nav>
 
-
        </div>
-       <div class="row">
-           <div class="col-lg-10">
-               <p>
-                   The Staffing Solutions's difference is being 'Smart'. It makes it easier. 'Smart' isn't going by the book or
-                   standing on ceremony.  It's innovating, evolving, challenging the status quo and setting new standards.
-                   </p>
-               <p>
-                   Our strength is our people.  As all-purpose staffing suppliers, capable of supplying quality staff in a
-                   variety of industries, we are able to leverage the incredible wealth of individual skills, unique attributes
-                   and personal experience that our people possess, and provide you with a complete staffing solution.
-                   You will find no one else more dedicated to the provision of service excellence.
-                </p>
-               <p>
-                   Staffing Solutions has amassed a wealth of candidates talent suitable to your need already, we are in the
-                   incredible position of being able to pick and choose your staff rather than rely on chance or rushed online
-                   advertisements. This smart solution results in a quicker turnaround time and more importantly lowers your
-                   costs.
-                   </p>
-                  <p>
-                   Renowned as an employment provider of choice, we continue to capture only the best possible candidates
-                   further enhancing our capacity to deliver only the best results to you.
-
-               </p>
-
-           </div>
-           <div class="col-lg-2">
-               <br />
-               <button type="button" class="btn btn-dark" style="width:100%;">Create Acount</button>
-               <br />               <br />
-
-
-               <button type="button" class="btn btn-dark" style="width:100%;">Log in</button><br /><br />
-
-               <div>
-                   <input type="text" style="width: 100%" placeholder="Job Title Or Category" />
-                   <br />
-                   <input type="text" style="width: 100%" placeholder="City or Postal Code" /><br />
-                   <button type="button" class="btn btn-primary" style="width:100%;">Log in</button><br /><br />
-                   <br />
-                   <img src="images/bbb-logo.png" style="width: 300px; text-align: center;" />
-               </div>
-               <div>
-               </div>
-
-           </div>
        </div>
-   </div>
-    <footer>
+       </header>
+       <main role="main" class="container">
+           <div class="row">
+               <div class="col-lg-10">
+                   <p>
+                       The Staffing Solutions's difference is being 'Smart'. It makes it easier. 'Smart' isn't going by the book or
+                       standing on ceremony.  It's innovating, evolving, challenging the status quo and setting new standards.
+                   </p>
+                   <p>
+                       Our strength is our people.  As all-purpose staffing suppliers, capable of supplying quality staff in a
+                       variety of industries, we are able to leverage the incredible wealth of individual skills, unique attributes
+                       and personal experience that our people possess, and provide you with a complete staffing solution.
+                       You will find no one else more dedicated to the provision of service excellence.
+                   </p>
+                   <p>
+                       Staffing Solutions has amassed a wealth of candidates talent suitable to your need already, we are in the
+                       incredible position of being able to pick and choose your staff rather than rely on chance or rushed online
+                       advertisements. This smart solution results in a quicker turnaround time and more importantly lowers your
+                       costs.
+                   </p>
+                   <p>
+                       Renowned as an employment provider of choice, we continue to capture only the best possible candidates
+                       further enhancing our capacity to deliver only the best results to you.
 
+                   </p>
 
+               </div>
+               <div class="col-lg-2">
+                   <br />
+                   <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Create Acount</button>
+                   <br />               <br />
+                   <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Log in</button><br /><br />
+
+                   <div>
+                       <input type="text" style="width: 100%" placeholder="Job Title Or Category" />
+                       <br />
+                       <input type="text" style="width: 100%" placeholder="City or Postal Code" /><br />
+                       <button type="button" class="btn btn-primary" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Log in</button><br /><br />
+                   </div>
+                   <div style="width:100%">
+                       <img src="images/bbb-logo.jpg" style="text-align:center;" />
+                   </div>
+
+               </div>
+           </div>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Web Development </span>
+        </div>
     </footer>
 
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Under Construction</h5>
+                </div>
+                <div class="modal-body">
+                    The site is currently under construction. Please check back for updates. 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
