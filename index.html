@@ -21,19 +21,29 @@
                <div class="collapse navbar-collapse" id="navbarNav">
                    <ul class="navbar-nav">
                        <li class="nav-item active">
-                           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">About SSLNS</a>
+                           <a class="nav-link" href="aboutus.pdf">About SSLNS</a>
                        </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal">Staffing Services</a>
+                       <li class="nav-item dropdown">
+                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Staffing Services<b class="caret"></b></a>
+                           <ul class="dropdown-menu">
+                               <li><a href="administrativestaffing.html">Administrative Staffing</a></li>
+                               <li><a href="legalstaffing.html">Legal Staffing</a></li>
+                           </ul>
                        </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"> Job Seeker Resources</a>
+                       <li class="nav-item dropdown">
+                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Job Seeker Resources<b class="caret"></b></a>
+                           <ul class="dropdown-menu">
+                               <li><a href="tipsandtechniques.html">Tips and Techniques</a></li>
+                           </ul>
                        </li>
-                       <li class="nav-item">
-                           <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal"> Employer Resources</a>
+                       <li class="nav-item dropdown">
+                           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"> Employer Resources</a>
+                           <ul class="dropdown-menu">
+                               <li><a href="employeeadvice.html">Employer Advice</a></li>
+                           </ul>
                        </li>
                    </ul>
                </div>
@@ -73,6 +83,7 @@
                    <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Create Acount</button>
                    <br />               <br />
                    <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Log in</button><br /><br />
+                   <button type="button" class="btn btn-link" style="width:100%;" onclick="location.href='contact_us.html'">Contact Us</button>
 
                    <div>
                        <input type="text" style="width: 100%" placeholder="Job Title Or Category" />
