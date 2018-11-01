@@ -1,13 +1,22 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#"%>
+<!DOCTYPE html>
+<script runat="server">
+void sayHelloeFromServer(Object sender, EventArgs e)
+{
+ClientScript.RegisterStartupScript(this.GetType(), "alert",
+"alert('Hello From Server')", true);
+}
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
     <meta charset="utf-8" />
     <title>Programming Assignment #1</title>
    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="css/sticky-footer-navbar.css" type="text/css" />
 </head>
 <body>
+    <form id="form1" runat="server">
     <header>
    <div class="container">
        <div class="row">
@@ -80,12 +89,23 @@
                </div>
                <div class="col-lg-2">
                    <br />
-                   <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Create Acount</button>
-                   <br />               <br />
-                   <button type="button" class="btn btn-dark" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Log in</button><br /><br />
+                   
+                   <asp:Button id="btnSayHello" text="Create Account" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br /><br />                   <asp:Button id="Button1" text="Log in" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br />
                    <button type="button" class="btn btn-link" style="width:100%;" onclick="location.href='contact_us.html'">Contact Us</button>
 
+
+
                    <div>
+                   
+                       <asp:TextBox id="txtValidated" runat="server" />
+<asp:RangeValidator id="RangeValidator" runat="server"
+ErrorMessage ="This Number Is Not In The Range" ControlToValidate="txtValidated"
+MaximumValue ="10" MinimumValue="1" Type="Integer" />
+<br /><br />
+<label>Not validated:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<asp:TextBox id="txtNotValidated" runat="server" /><br /><br />
+<br /><br />
+<asp:Label id="lblMessage" runat="server" EnableViewState="False" />
                        <input type="text" style="width: 100%" placeholder="Job Title Or Category" />
                        <br />
                        <input type="text" style="width: 100%" placeholder="City or Postal Code" /><br />
@@ -129,5 +149,6 @@
     <script src="js/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="scripts/scripts.js"></script>
+        </form>
 </body>
 </html>
