@@ -4,7 +4,7 @@
 void sayHelloeFromServer(Object sender, EventArgs e)
 {
 ClientScript.RegisterStartupScript(this.GetType(), "alert",
-"alert('Hello From Server')", true);
+"alert('Under Construction')", true);
 }
 </script>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -89,27 +89,14 @@ ClientScript.RegisterStartupScript(this.GetType(), "alert",
                </div>
                <div class="col-lg-2">
                    <br />
-                   
-                   <asp:Button id="btnSayHello" text="Create Account" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br /><br />                   <asp:Button id="Button1" text="Log in" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br />
-                   <button type="button" class="btn btn-link" style="width:100%;" onclick="location.href='contact_us.html'">Contact Us</button>
-
-
+                   <asp:HyperLink id="createBtn" text="Create Account" Font-size="15" class="btn btn-dark"  NavigateUrl="createAccount.aspx" runat="server" /> <br /><br />                   <asp:HyperLink id="loginBtn" text="Log in" Font-size="15" class="btn btn-dark"  NavigateUrl="login.aspx" runat="server" /> <br />
+                   <asp:HyperLink ID="contactUs" runat="Server" NavigateUrl="contact_us.aspx" text="Contact Us" />
 
                    <div>
-                   
-                       <asp:TextBox id="txtValidated" runat="server" />
-<asp:RangeValidator id="RangeValidator" runat="server"
-ErrorMessage ="This Number Is Not In The Range" ControlToValidate="txtValidated"
-MaximumValue ="10" MinimumValue="1" Type="Integer" />
-<br /><br />
-<label>Not validated:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-<asp:TextBox id="txtNotValidated" runat="server" /><br /><br />
-<br /><br />
-<asp:Label id="lblMessage" runat="server" EnableViewState="False" />
-                       <input type="text" style="width: 100%" placeholder="Job Title Or Category" />
-                       <br />
-                       <input type="text" style="width: 100%" placeholder="City or Postal Code" /><br />
-                       <button type="button" class="btn btn-primary" style="width:100%;" data-toggle="modal" data-target="#exampleModal">Search</button><br /><br />
+                       <asp:TextBox id="txtValidated" runat="server" placeholder="Job Title Or Category" />               
+                       <asp:TextBox id="txtNotValidated" runat="server" placeholder="City or Postal Code"/><br /><br />
+                       <asp:Button id="search" text="Search" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" />
+                       
                    </div>
                    <div style="width:100%">
                        <img src="images/bbb-logo.jpg" style="text-align:center;" />
