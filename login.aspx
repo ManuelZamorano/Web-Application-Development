@@ -37,7 +37,13 @@ ClientScript.RegisterStartupScript(this.GetType(), "alert",
 					
 					
 					<label>Email Address</label>
-					<asp:TextBox ID="email1" runat="server" style="width:40%;"></asp:TextBox><br>
+					<asp:TextBox ID="email1" runat="server" style="width:40%;"></asp:TextBox>
+			        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="*" ControlToValidate="email1" ValidationGroup="vgSubmit" ForeColor="Red">
+			        </asp:RequiredFieldValidator>
+			        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Please Enter Valid Email address" ValidationGroup="vgSubmit" ControlToValidate="email1" CssClass="requiredFieldValidateStyle" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+				    </asp:RegularExpressionValidator>
+                
+                    <br>
 					<label>Password</label>
 					<asp:TextBox ID="email2" runat="server" style="width:40%;"></asp:TextBox><br>
 					
