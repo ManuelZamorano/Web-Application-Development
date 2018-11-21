@@ -25,11 +25,9 @@ ClientScript.RegisterStartupScript(this.GetType(), "alert",
 					<h1 style="color:#ffffff">Contact Us</h1>
 				</div>
 			</div>
-	   
 		</div>
 	</header>
 	<main role="main" class="container">
-	   
 		<div class="row">
 			<div class="col-lg-12">
 				<h5 style="color:blue;">Enter Your Email to Check Account Existence</h5>
@@ -38,50 +36,33 @@ ClientScript.RegisterStartupScript(this.GetType(), "alert",
 			        </asp:RequiredFieldValidator>
 			        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Please Enter Valid Email ID" ValidationGroup="vgSubmit" ControlToValidate="checkEmail" CssClass="requiredFieldValidateStyle" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
 				    </asp:RegularExpressionValidator>
-
-
-
-
-
-				 <asp:Button id="checkAccount" text="CHECK ACCOUNT EXISTENCE" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br /><br />
+				    <asp:Button id="checkAccount" text="CHECK ACCOUNT EXISTENCE" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" /> <br /><br />
 				<h5 style="color:red;">Enter Your Personal Information</h5>
 					<label  style="width:30%;">First Name</label><label  style="width:30%;">Middle Name</label><label  style="width:30%;">Last Name</label><br>
-					<asp:TextBox ID="fname" runat="server" style="width:30%;"></asp:TextBox>
-				
-
-
-					<asp:TextBox ID="middle" runat="server" style="width:30%;"></asp:TextBox>
-
-					<asp:TextBox ID="lname" runat="server" style="width:30%;"></asp:TextBox><br>
-					
+					<asp:TextBox ID="firstName" runat="server" style="width:30%;"></asp:TextBox>
+					<asp:TextBox ID="middleInitials" runat="server" style="width:30%;"></asp:TextBox>
+					<asp:TextBox ID="lastName" runat="server" style="width:30%;"></asp:TextBox><br>
 					<label style="width:50%;">Email Address 1</label><label style="width:50%;">Email address 2</label>
-					<<asp:TextBox ID="email1" runat="server" style="width:40%;"></asp:TextBox>
-			        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="email1" ValidationGroup="vgSubmit" ForeColor="Red">
+					<<asp:TextBox ID="emailAddress1" runat="server" style="width:40%;"></asp:TextBox>
+			        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="emailAddress1" ValidationGroup="vgSubmit" ForeColor="Red">
 			        </asp:RequiredFieldValidator>
-			        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please Enter Valid Email address" ValidationGroup="vgSubmit" ControlToValidate="email1" CssClass="requiredFieldValidateStyle" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+			        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Please Enter Valid Email address" ValidationGroup="vgSubmit" ControlToValidate="emailAddress1" CssClass="requiredFieldValidateStyle" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
 				    </asp:RegularExpressionValidator>
-					<asp:TextBox ID="email2" runat="server" style="width:40%;"></asp:TextBox><br>
+					<asp:TextBox ID="emailAddress2" runat="server" style="width:40%;"></asp:TextBox><br>
 					<label style="width:70%;">Streer Address</label><label style="width:20%;">Apt#</label>
-					<asp:TextBox ID="address" runat="server" style="width:70%;"></asp:TextBox>
-					<asp:TextBox ID="apt" runat="server" style="width:20%;"></asp:TextBox><br>
+					<asp:TextBox ID="streetAddress" runat="server" style="width:70%;"></asp:TextBox>
+					<asp:TextBox ID="aaptNopt" runat="server" style="width:20%;"></asp:TextBox><br>
 					<label style="width:30%;">City</label><label style="width:30%;">State</label><label style="width:30%;">Zip</label>
 					<asp:TextBox ID="city" runat="server" style="width:30%;"></asp:TextBox>
 					<asp:TextBox ID="state" runat="server" style="width:30%;"></asp:TextBox>
 					<asp:TextBox ID="zip" runat="server" style="width:30%;"></asp:TextBox><br>
 					<label style="width:50%;">Phone</label>
-					<asp:TextBox ID="phone" runat="server" style="width:50%;"></asp:TextBox><br>
+					<asp:TextBox ID="homePhone" runat="server" style="width:50%;"></asp:TextBox><br>
 					<label>Job Experience</label>
-					<asp:TextBox ID="experience" TextMode="multiline" runat="server" cols="4" rows="5" style="width:100%;"></asp:TextBox>	
-
-					<asp:Button id="saveAccount" text="SAVE ACCOUNT INFORMATION" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" style="width:40%" /> 					<asp:HyperLink id="backMain" text="BACK TO MAIN PAGE" Font-size="15" NavigateUrl="index.aspx" class="btn btn-dark" runat="server" style="width:40%" /> 
+					<asp:TextBox ID="jobExperience" TextMode="multiline" runat="server" cols="4" rows="5" style="width:100%;"></asp:TextBox>	
+					<asp:Button id="saveAccount" text="SAVE ACCOUNT INFORMATION" Font-size="15" class="btn btn-dark" OnClick="sayHelloeFromServer" runat="server" style="width:40%" /> 					<asp:HyperLink id="backMain" text="BACK TO MAIN PAGE" Font-size="15" NavigateUrl="index.aspx" class="btn btn-dark" runat="server" style="width:40%" /> 
 			</div>
-
-
-
 		</div>
-
-
-
 	</main>
 	<footer class="footer">
 		<div class="container">
